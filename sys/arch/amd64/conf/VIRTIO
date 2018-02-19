@@ -1,0 +1,15 @@
+#	
+
+include "arch/amd64/conf/GENERIC"
+
+include "dev/virtio/files.virtio"
+include "dev/pci/virtio/files.virtio_pci"
+
+no virtio
+
+vblk* at pci?
+ld* at vblk?
+vcon* at pci?
+vnet* at pci?
+
+device-major vcon char 342 vcon
