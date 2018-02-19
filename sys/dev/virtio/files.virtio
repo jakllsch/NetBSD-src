@@ -1,0 +1,13 @@
+define virtio_subr
+file dev/virtio/virtio_subr.c virtio_subr
+
+device	vblk {}: virtio_subr
+file	dev/virtio/vblk.c	vblk
+attach	ld at vblk with ld_vblk
+file	dev/virtio/ld_vblk.c	ld_vblk
+
+device	vcon: virtio_subr
+file	dev/virtio/vcon.c	vcon
+
+device	vnet: virtio_subr
+file	dev/virtio/if_vnet.c	vnet

@@ -1,0 +1,8 @@
+attach vblk at pci with vblk_pci
+file dev/pci/virtio/vblk_pci.c vblk_pci
+
+attach vcon at pci with vcon_pci
+file dev/pci/virtio/vcon_pci.c vcon_pci
+
+attach vnet at pci with vnet_pci
+file dev/pci/virtio/if_vnet_pci.c vnet_pci
